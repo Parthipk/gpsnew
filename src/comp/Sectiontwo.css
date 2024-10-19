@@ -1,0 +1,73 @@
+.sectiontwo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 75%;
+  margin: 0 auto; /* Center the section horizontally */
+}
+
+.heading-approach {
+  text-align: left; /* Center the heading text */
+  font-size: 3rem;
+  color: #003366;
+  margin-left: 11%; /* Add spacing below the heading */
+}
+
+.content-text {
+  flex: 1;
+  margin-left: -1.8%;
+  font-size: 1.2rem;
+  color: #555; /* Medium text color */
+  line-height: 1.5; /* Increased line height for more spacing */
+  margin-bottom: 20px;
+}
+
+.content-image {
+  flex: 1;
+  display: flex;
+  justify-content: center; /* Center the image horizontally */
+}
+
+.content-image img {
+  height: 300px;
+  width: 580px;
+  border-radius: 30px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .sectiontwo {
+    flex-direction: column; /* Stack the text and image vertically on smaller screens */
+    width: 90%; /* Increase width to use more of the available space */
+  }
+
+  .heading-approach {
+    font-size: 2rem; /* Adjust font size for smaller screens */
+    margin-left: 0; /* Remove left margin on smaller screens */
+    text-align: center; /* Center text on smaller screens */
+  }
+
+  .content-text {
+    margin: 0 auto; /* Center horizontally and add bottom margin */
+    width: 90%;           /* Set a width to allow centering */
+    text-align: justify;  /* Justify the text inside the element */
+}
+
+
+
+  .content-image {
+    justify-content: center; /* Ensure the image container is centered */
+  }
+
+  .content-image img {
+    width: 100%; /* Make the image responsive */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 100%; /* Ensure image doesn’t overflow */
+  }
+}
+
+@media (max-width: 480px) {
+  .heading-approach {
+    font-size: 1.5rem; /* Further reduce font size for very small screens */
+  }
+}

@@ -1,0 +1,58 @@
+.partnership-gallery {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  background-color: white;
+  flex-wrap: wrap; /* Allow logos to wrap on smaller screens */
+  margin-top: 200px;
+}
+
+.partnership-logo {
+  width: 100px; /* Default size for larger screens */
+  height: auto;
+  margin: 0 10px; /* Space between logos */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Hover effect */
+.partnership-logo:hover {
+  transform: scale(1.1); /* Slightly increase size */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add shadow */
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .partnership-logo {
+    width: 80px; /* Smaller size for medium screens */
+    margin: 0 8px; /* Adjust spacing */
+    
+  }
+}
+
+@media (max-width: 1024px) {
+
+  .partnership-gallery {
+
+    margin-top: 50px;
+  }
+  
+  .partnership-logo {
+    width: 60px; /* Smaller size for mobile screens */
+    margin: 0 6px; /* Adjust spacing */
+  }
+}
+
+@media (max-width: 480px) {
+  .partnership-gallery {
+    flex-direction: row; /* Ensure horizontal layout on very small screens */
+    justify-content: space-around; /* Center logos horizontally */
+    overflow-x: auto; /* Allow horizontal scrolling */
+    padding: 10px; /* Adjust padding for smaller screens */
+  }
+
+  .partnership-logo {
+    width: 50px; /* Even smaller size for very small screens */
+    margin: 5px; /* Adjust spacing */
+  }
+}

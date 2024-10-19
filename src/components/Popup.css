@@ -1,0 +1,129 @@
+/* Overlay to cover the entire screen */
+.bookademopopup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8); /* Darker semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensure it's above other elements */
+}
+
+/* Popup container */
+.bookademopopup-container {
+  width: 90%; /* Full width for smaller screens */
+  max-width: 450px; /* Max width for larger screens */
+  height: auto; /* Allow height to adjust based on content */
+  background-color: #003366; /* Background color */
+  border-radius: 12px; /* More rounded corners */
+  padding: 20px; /* Reduced padding for smaller screens */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Deeper shadow for a more elevated look */
+  display: flex;
+  flex-direction: column; /* Arrange items in a column */
+  position: relative; /* Set position relative to allow absolute positioning of children */
+  transition: transform 0.3s ease; /* Smooth transition for popup appearance */
+}
+
+/* Header style */
+.bookademopopup-header {
+  margin-bottom: 10px; /* Space below the header */
+  text-align: center; /* Center the header text */
+  font-size: 1.5rem; /* Increase font size for better visibility */
+  color: #ffffff; /* Text color for better contrast */
+}
+
+/* Subheader style */
+.bookademopopup-subheader {
+  margin-bottom: 20px; /* Space below the subheader */
+  text-align: center; /* Center the subheader text */
+  color: #ffffff; /* Slightly darker color for subheader */
+}
+
+/* Form group styling */
+.bookademopopup-form-group {
+  margin-bottom: 15px; /* Space between form groups */
+}
+
+/* Label styling */
+label {
+  margin-bottom: 5px; /* Space below labels */
+  font-weight: bold; /* Bold labels */
+  color: #555; /* Slightly darker color */
+}
+
+/* Input field styling */
+input {
+  width: 100%; /* Full width */
+  padding: 12px; /* More padding for comfort */
+  border: 1px solid #ddd; /* Light border */
+  border-radius: 6px; /* Rounded corners */
+  transition: border-color 0.2s; /* Smooth transition for focus */
+}
+
+/* Input field focus styling */
+input:focus {
+  border-color: #28a745; /* Highlight border on focus */
+  outline: none; /* Remove default outline */
+}
+
+/* Submit button styling */
+.bookademopopup-submit-button {
+  padding: 12px; /* Padding inside button */
+  background-color: #ffffff; /* White background */
+  color: #003366; /* Text color */
+  border: none; /* No border */
+  border-radius: 6px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-weight: bold; /* Bold text */
+  transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
+}
+
+/* Submit button hover effect */
+.bookademopopup-submit-button:hover {
+  transform: translateY(-2px); /* Slightly lift button on hover */
+}
+
+/* Close button styling */
+.bookademopopup-close-button {
+  position: absolute; /* Position it absolutely within the popup */
+  top: 15px; /* Distance from the top */
+  right: 15px; /* Distance from the right */
+  background: none; /* No background */
+  border: none; /* No border */
+  color: #ffffff; /* Change color to white for better contrast */
+  font-size: 28px; /* Increase size of the close button */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: color 0.2s; /* Smooth transition for color */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+
+  .bookademopopup-container {
+    width: 68%;
+  }
+  .bookademopopup-container {
+    padding: 15px; /* Reduced padding for smaller screens */
+    margin-top: 50px;
+  }
+
+  .bookademopopup-header {
+    font-size: 1.25rem; /* Smaller font size for header */
+  }
+
+  .bookademopopup-subheader {
+    font-size: 1rem; /* Smaller font size for subheader */
+  }
+
+  .bookademopopup-submit-button {
+    padding: 10px; /* Smaller padding for button */
+    font-size: 14px; /* Smaller font size for button */
+  }
+
+  .bookademopopup-close-button {
+    font-size: 24px; /* Smaller close button size */
+  }
+}

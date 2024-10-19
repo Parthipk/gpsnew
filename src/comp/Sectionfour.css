@@ -1,0 +1,62 @@
+.section_four {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff; /* Optional: background color for the section */
+    border-radius: 10px; /* Optional: rounded corners for the section */
+  }
+  
+  .section_four__quote-container {
+    text-align: center;
+    margin-bottom: 20px; /* Spacing between quote and navigation dots */
+  }
+  
+  .section_four__quote-heading {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    position: relative; /* Position relative to place logo absolutely */
+  }
+  
+  .section_four__logo {
+    position: absolute;
+    top: -30px; /* Adjust this value to position the logo above the heading text */
+    left: 50%;
+    transform: translateX(-50%); /* Center the logo horizontally */
+    width: 24px; /* Adjust size as needed */
+    height: auto;
+  }
+  
+  .section_four__quote-text {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    font-style: italic;
+  }
+  
+  .section_four__quote-author {
+    font-size: 1rem;
+    color: #ffffff;
+  }
+  
+  .section_four__quote-dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Spacing between dots */
+  }
+  
+  .section_four__dot {
+    width: 12px;
+    height: 12px;
+    background-color: #d4d4d4;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .section_four__dot.active {
+    background-color: #007bff; /* Color for the active dot */
+  }
+  

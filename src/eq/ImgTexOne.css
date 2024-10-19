@@ -1,0 +1,13 @@
+/* ImgTexOne.css */
+.img-tex-nine-container {
+  display: flex; /* Use flexbox for centering */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  padding: 20px; /* Optional padding for better spacing */
+}
+
+.img-tex-nine-image {
+  width: 50%; /* Set width to 50% */
+  height: 400px; /* Set height to 400px */
+  object-fit: cover; /* Ensure the image covers its area without distortion */
+}

@@ -1,0 +1,129 @@
+/* Base styles for larger screens (desktop) */
+.feone-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Space between columns */
+  }
+  
+  .feone-leftColumn {
+    flex: 1;
+    max-width: 50%; /* Limit width to 50% */
+  }
+  
+  .feone-rightColumn {
+    flex: 1;
+    max-width: 40%; /* Limit width to 40% */
+    padding: 20px;
+  }
+  
+  .feone-heading {
+    font-size: 24px;
+    color: #003366;
+    margin-bottom: 10px;
+  }
+  
+  .feone-description {
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: justify;
+  }
+  
+  .feone-imageWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .feone-mainImage {
+    width: 550px;
+    height: 300px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 1px solid #ddd;
+  }
+  
+  .feone-thumbnailContainer {
+    display: flex;
+    justify-content: center; /* Center thumbnails horizontally */
+    gap: 10px; /* Space between thumbnails */
+    margin-top: 10px; /* Add some spacing between the main image and thumbnails */
+  }
+  
+  .feone-thumbnail {
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 1px solid #ddd;
+  }
+  
+  /* Responsive styles for tablets and mobile devices */
+  @media screen and (max-width: 1024px) {
+    .feone-container {
+      flex-direction: column; /* Stack columns vertically on smaller screens */
+      gap: 10px; /* Reduce space between stacked columns */
+    }
+  
+    .feone-leftColumn, .feone-rightColumn {
+      max-width: 100%; /* Allow columns to take full width */
+    }
+  
+    .feone-rightColumn {
+      padding: 10px; /* Reduce padding for smaller screens */
+      margin-left: 40px;
+    }
+  
+    .feone-mainImage {
+      width: 100%; /* Make the main image responsive */
+      height: auto; /* Maintain aspect ratio */
+    }
+  
+    .feone-thumbnailContainer {
+      flex-direction: row; /* Align thumbnails horizontally */
+      flex-wrap: wrap; /* Allow thumbnails to wrap to the next line if needed */
+      gap: 10px; /* Maintain space between thumbnails */
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .feone-heading {
+      font-size: 20px; /* Adjust heading size for smaller screens */
+    }
+  
+    .feone-description {
+      font-size: 14px; /* Adjust font size for smaller screens */
+    }
+  
+    .feone-mainImage {
+      width: 100%; /* Make the main image responsive */
+      height: auto; /* Maintain aspect ratio */
+    }
+  
+    .feone-thumbnail {
+      width: 60px; /* Adjust thumbnail size for smaller screens */
+      height: 60px; /* Adjust thumbnail size for smaller screens */
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .feone-heading {
+      font-size: 18px; /* Further adjust heading size for very small screens */
+    }
+  
+    .feone-description {
+      font-size: 12px; /* Further adjust font size for very small screens */
+    }
+  
+    .feone-mainImage {
+      width: 100%; /* Make the main image responsive */
+      height: auto; /* Maintain aspect ratio */
+    }
+  
+    .feone-thumbnail {
+      width: 50px; /* Further adjust thumbnail size for very small screens */
+      height: 50px; /* Further adjust thumbnail size for very small screens */
+    }
+  }
+  

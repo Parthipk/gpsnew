@@ -1,0 +1,139 @@
+/* Testimonial Container */
+.testimonial-container {
+  display: flex;
+  justify-content: center; /* Center items horizontally */
+  align-items: flex-start;
+  flex-wrap: wrap; /* Allow wrapping of items */
+  width: auto;
+  margin: 0 auto; /* Centers the container horizontally */
+  background: url('../images/bg2.png') no-repeat center center;
+  background-size: cover; /* Ensure the background image covers the entire container */
+  padding: 20px;
+  border-radius: 15px;
+}
+
+/* Testimonial Items */
+.testimonial-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; /* Center content within item */
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.9); /* White background with transparency */
+  padding: 20px;
+  border-radius: 15px;
+  width: 45%;
+  margin: 10px; /* Add margin to space out items */
+}
+
+.testimonial-image-column {
+  width: 40%;
+}
+
+.testimonial-text-column {
+  width: 55%;
+  text-align: left; /* Align text left within the text column */
+}
+
+.testimonial-image {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Testimonial Heading */
+.testimonial-heading {
+  font-size: 2rem;
+  color: #003366;
+  margin-bottom: 10px;
+  text-align: center; /* Center heading text */
+}
+
+/* Testimonial Description */
+.testimonial-description {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.5;
+}
+
+/* Testimonial Title */
+.testimonial-title {
+  text-align: center; /* Center title text */
+  font-size: 3rem;
+  color: #003366;
+  margin-bottom: 20px;
+}
+
+/* Testimonial Subtitle */
+.testimonial-subtitle {
+  text-align: center; /* Center subtitle text */
+  font-size: 20px;
+  color: gray;
+  margin-bottom: 40px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .testimonial-container {
+    flex-direction: column; /* Stack items vertically */
+    margin-top: 20px;
+  }
+
+  .testimonial-subtitle {
+    text-align: center; /* Center subtitle text */
+    font-size: 11px;
+    width: 90%;           /* Set width to 90% */
+    margin: 0 auto;      /* Center the element */
+  }
+
+  .testimonial-item {
+    flex-direction: column;
+    width: 80%; /* Center items with a fixed width */
+    margin: 10px auto; /* Center items with auto margins */
+  }
+
+  .testimonial-image-column,
+  .testimonial-text-column {
+    width: 100%; /* Full width for smaller screens */
+    text-align: center; /* Center align text */
+  }
+
+  .testimonial-image {
+    width: 80%;
+    margin: 0 auto; /* Center the image */
+  }
+}
+
+/* Testimonial Image Hover */
+.testimonial-image {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.testimonial-image:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Adds a shadow around the image */
+}
+
+/* Order Now Button */
+.order-now-button {
+  background-color: #003366; /* Blue background */
+  color: white; /* White text */
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth transition */
+  margin-top: 10px; /* Space between paragraph and button */
+  display: block; /* Display as block for centering */
+  margin-left: auto; /* Center the button */
+  margin-right: auto; /* Center the button */
+  width: fit-content;
+}
+
+/* Button Hover Effect */
+.order-now-button:hover {
+  background-color: #002244; /* Darker blue on hover */
+}

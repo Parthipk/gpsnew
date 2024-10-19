@@ -1,0 +1,58 @@
+.m4-container {
+  background-color: #003366; /* Set background color */
+  height: 700px; /* Set container height */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  padding: 20px;
+}
+
+.m4-header {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.m4-description {
+  font-size: 1.2rem;
+  text-align: center;
+  margin-bottom: 20px;
+  max-width: 800px;
+  /* Center text horizontally */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.m4-video-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.m4-video {
+  height: 500px; /* Set video height */
+  width: auto; /* Keep aspect ratio */
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .m4-header {
+      font-size: 2rem; /* Adjust font size for smaller screens */
+  }
+
+  .m4-description {
+      font-size: 1rem; /* Adjust description font size */
+      /* Ensure description is centered */
+      margin: 0 auto;
+  }
+
+  .m4-video {
+      height: auto;
+      width: 100%;
+  }
+}

@@ -1,0 +1,21 @@
+.blog-container {
+    text-align: center;
+    padding: 20px;
+  
+  }
+  
+  .centered-photo {
+    width: 70%;
+    margin: 0 auto;
+    display: block;
+    height: 409px;
+    border-radius: 30px;
+}
+.lorem-text {
+    margin: 20px auto; /* Centers the text block horizontally */
+    font-size: 16px;
+    color: #333;
+    width: 80%; /* Controls the width of the text block */
+    text-align: justify; /* Justifies the text content */
+  }
+  

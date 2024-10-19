@@ -1,0 +1,173 @@
+/* Container styling */
+.partsix-container {
+  background-color: #0C66A3; /* Light blue background */
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 80%;
+  margin: 0 auto;
+  height: auto;
+}
+
+/* Heading and description styling */
+.partsix-heading {
+  text-align: left;
+  font-size: 2.5rem;
+  color: white;
+  margin-left: 65px;
+  margin-bottom: 10px; /* Adjusted margin */
+}
+
+.partsix-description {
+  text-align: left;
+  font-size: 1rem;
+  color: white;
+  margin-bottom: 20px; /* Added margin */
+  margin-left: 65px;
+}
+
+/* Form styling */
+.partsix-form {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: 0 auto; /* Center form horizontally */
+}
+
+/* Group styling */
+.form-group {
+  margin-bottom: 20px;
+}
+
+/* Horizontal layout for form groups */
+.form-group-horizontal {
+  display: flex;
+  flex-wrap: wrap; /* Allows wrapping for smaller screens */
+  gap: 30px; /* Increased space between fields */
+}
+
+.form-group-half {
+  flex: 1; /* Take up available space equally */
+}
+
+.form-group-full {
+  flex: 1 0 100%; /* Full width for fields that should take the entire row */
+}
+
+/* Label styling */
+.form-group label {
+  display: block;
+  font-size: 1rem;
+  color: white;
+  margin-bottom: 5px;
+}
+/* Hidden message styling */
+.hidden-message {
+  display: none; /* Hide the element */
+}
+input[type="text"] {
+  width: 95%; /* Set width to 90% for text inputs */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input[type="email"],
+input[type="tel"] {
+  width: 89%; /* Set width to 90% for text inputs */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+
+
+input[type="number"],
+input[type="date"],
+input[type="time"],
+textarea {
+  width: 87%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Specific styling for the address and message text areas */
+input[type="text"]#address, /* Target the address input field */
+textarea#message { /* Target the message textarea */
+  width: 95%; /* Full width for both fields */
+}
+
+/* Optionally adjust padding and font size for better readability */
+input[type="text"]#address,
+textarea#message {
+  padding: 12px; /* Increase padding for better spacing */
+  font-size: 1rem; /* Adjust font size if needed */
+}
+
+/* Textarea styling */
+textarea {
+  resize: vertical; /* Allow vertical resizing only */
+}
+
+/* Submit button styling */
+.partsix-submit {
+  background-color: white;
+  color: #003366;
+  border: none;
+  padding: 10px;
+  width: 17%; /* Full width button */
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.partsix-submit:hover {
+  background-color: #f0f0f0;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 1024px) {
+
+
+  input[type="email"],
+  input[type="tel"] {
+    width: 95%; /* Set width to 90% for text inputs */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .partsix-heading {
+    margin-left: 20px;
+  }
+  
+  .partsix-description {
+    margin-left: 20px;
+  }
+  
+  .partsix-submit {
+    width: 100%; /* Full width button for mobile view */
+  }
+  
+}
+.contact-container {
+  display: flex;
+  align-items: center; /* Align button and input vertically */
+}
+
+.contact-toggle {
+  background-color: white;
+  color: hsl(210, 100%, 20%);
+  border: 1px solid #ccc;
+  padding: 8px 12px;
+  margin-right: 10px; /* Space between button and input */
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contact-toggle:hover {
+  background-color: #003366;
+  color: #ccc;
+}

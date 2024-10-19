@@ -1,0 +1,38 @@
+.photo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.photo-image {
+  width: 100%;
+  height: auto; /* Let the height adjust based on the width to maintain aspect ratio */
+
+  max-width: 90%; /* Ensure the image doesn't overflow the container */
+}
+
+/* Media Queries for Responsive Design */
+
+/* For large screens */
+@media (min-width: 1200px) {
+  .photo-image {
+    height: 500px; /* Set height for larger screens */
+  }
+}
+
+/* For medium screens (tablets) */
+@media (max-width: 1024px) {
+  .photo-image {
+    width: 95%; /* Increase width for smaller screens */
+    height: 350px; /* Reduce height for tablets */
+  }
+}
+
+/* For small screens (mobile phones) */
+@media (max-width: 480px) {
+  .photo-image {
+    width: 100%; /* Full width for mobile devices */
+    height: 250px; /* Reduce height for mobile */
+  }
+}

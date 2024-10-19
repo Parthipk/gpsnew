@@ -1,0 +1,181 @@
+.carousel-section {
+  padding: 60px 20px;
+  background-color: transparent; /* Light background color */
+  text-align: center;
+}
+
+.carousel-header {
+  font-size: 2rem;
+  color: #003366; /* Header color */
+  margin-bottom: 20px; /* Space below the header */
+}
+
+.carousel-container {
+  position: relative;
+  width: 90%; /* Adjust to fit the container width */
+  max-width: 1200px; /* Optional: Set a max width for the carousel */
+  overflow: hidden;
+  margin: 0 auto; /* Center the container horizontally */
+}
+
+.carousel-box {
+  display: flex;
+  transition: transform 0.5s ease;
+  width: calc(600px * 4); /* Adjust width to fit 4 items */
+}
+
+.carousel-box.show-additional {
+  animation: fade-in 1s ease-in-out;
+}
+
+.carousel-item {
+  flex: 0 0 600px; /* Maintain original size */
+  margin: 0 10px; /* Margin for spacing between boxes */
+  position: relative;
+  box-sizing: border-box; /* Include padding and border in the element’s total width and height */
+}
+
+.item-image {
+  width: 100%; /* Full width of the box */
+  height: 400px; /* Adjust height */
+  object-fit: cover; /* Ensure images cover the container */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.item-content {
+  padding: 10px;
+  background: #fff;
+  border-radius: 10px;
+}
+
+.item-description {
+  margin: 10px 0;
+  font-size: 1rem; /* Adjust font size */
+  color: #333;
+}
+
+.item-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item-date {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.read-more {
+  font-size: 0.9rem;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.read-more:hover {
+  text-decoration: underline;
+}
+
+/* Navigation buttons */
+.carousel-button {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  font-size: 24px;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 50%;
+  width: 50px; /* Size of buttons */
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-button.prev {
+  left: 10px;
+}
+
+.carousel-button.next {
+  right: 10px;
+}
+
+/* Dots for navigation */
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.carousel-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: #bbb;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.carousel-dot.active {
+  background-color: #007bff;
+}
+
+/* Animation for showing additional items */
+@keyframes fade-in {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+
+@media (max-width: 1024px) {
+  .carousel-item {
+    flex: 0 0 400px; /* Adjust size for smaller screens */
+    margin: 0 5px; /* Adjust margin for spacing */
+  }
+  .carousel-container {
+
+    width: 90%; /* Adjust to fit the container width */
+
+  }
+
+
+  .item-image {
+    height: 250px; /* Adjust height for smaller screens */
+   
+  }
+
+  .carousel-button {
+    font-size: 18px; /* Adjust button size for mobile */
+    width: 40px; /* Adjust size of buttons */
+    height: 40px;
+    padding: 8px;
+  }
+}
+
+@media (max-width: 576px) {
+  .carousel-item {
+    flex: 0 0 300px; /* Adjust size for very small screens */
+    margin: 0 5px; /* Adjust margin for spacing */
+  }
+
+  .item-image {
+    height: 200px; /* Adjust height for very small screens */
+  }
+
+  .carousel-button {
+    font-size: 16px; /* Further adjust button size for very mobile */
+    width: 35px; /* Further adjust size of buttons */
+    height: 35px;
+    padding: 6px;
+    transform: translateY(-80px); /* Move the button up by 10 pixels */
+}
+
+}
+.carousel-item a {
+  text-decoration: none;
+}

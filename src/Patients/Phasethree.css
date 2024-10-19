@@ -1,0 +1,112 @@
+.section-phasethree {
+  display: flex;
+  align-items: center;
+
+  width: 80%;
+  gap: 10px;
+  margin: 0 auto; /* Center the section horizontally */
+  padding: 20px;
+}
+
+.heading-phasethree {
+  text-align: left; /* Align heading text to the right */
+  font-size: 2rem;
+  color: #003366;
+  margin-left:158px; /* Space on the right */
+}
+
+.image-container-phasethree {
+  flex: 1;
+  margin-right: 20px;
+  
+}
+
+.text-container-phasethree {
+  flex: 1.5;
+  font-size: 1.2rem;
+  color: #555; /* Medium text color */
+  line-height: 1.5; /* Increased line height for more spacing */
+  margin-bottom: 20px;
+}
+
+.image-container-phasethree img {
+  width: 500px;
+  height: 350px;
+  margin-left: 8px;
+  border-radius: 15px; /* Rounded corners */
+}
+
+/* Bottom section */
+.bottom-section-phasethree {
+  margin-top: 40px; /* Space above the bottom section */
+  padding: 20px;
+  text-align: center;
+}
+
+.bottom-header-phasethree {
+  font-size: 2rem;
+  color: #003366;
+  margin-bottom: 10px; /* Space below the header */
+}
+
+.bottom-paragraph-phasethree {
+  font-size: 1.2rem;
+  text-align: justify;
+  width: 82%;
+  margin: 0 auto; /* Center the paragraph block */
+  color: #333; /* Darker gray for the paragraph */
+  font-size: 1.2rem;
+  color: #555; /* Medium text color */
+  line-height: 1.5; /* Increased line height for more spacing */
+  margin-bottom: 20px;
+  
+}
+
+/* Responsive adjustments */
+@media (max-width: 1640px) {
+  .section-phasethree {
+    flex-direction: column; /* Stack the image and text vertically on smaller screens */
+    width: 90%; /* Increase width to use more of the available space */
+  }
+
+  .heading-phasethree {
+    font-size: 2rem; /* Adjust font size for smaller screens */
+    margin-right: 0; /* Remove right margin on smaller screens */
+    text-align: center; /* Center text on smaller screens */
+    margin-bottom: 20px; /* Add space below heading */
+ 
+  }
+
+  .image-container-phasethree {
+    margin-right: 0; /* Remove margin on smaller screens */
+    margin-bottom: 20px; /* Add space below image */
+    text-align: center; /* Center the image container */
+  
+  }
+  .text-container-phasethree {
+   
+    width: 90%;
+  }
+  .image-container-phasethree img {
+    width: 100%; /* Make the image responsive */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 100%; /* Ensure image doesn’t overflow */
+
+  }
+}
+
+@media (max-width: 480px) {
+  .heading-phasethree {
+    font-size: 1.5rem; /* Further reduce font size for very small screens */
+    margin-left: 1px;
+  }
+  
+  .bottom-header-phasethree {
+    font-size: 1.5rem;
+  }
+
+  .bottom-paragraph-phasethree {
+    font-size: 1rem;
+    width: 90%;
+  }
+}

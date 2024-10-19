@@ -1,0 +1,128 @@
+/* Base styles for larger screens (desktop) */
+.partone_container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px; /* Space between columns */
+}
+
+.partone_leftColumn {
+  flex: 1;
+  max-width: 50%; /* Limit width to 50% */
+}
+
+.partone_rightColumn {
+  flex: 1;
+  max-width: 40%; /* Limit width to 40% */
+  padding: 20px;
+}
+
+.partone_heading {
+  font-size: 24px;
+  color: #003366;
+  margin-bottom: 10px;
+}
+
+.partone_description {
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.partone_imageWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.partone_mainImage {
+  width: 550px;
+  height: 300px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  object-fit: cover;
+  border: 1px solid #ddd;
+}
+
+.partone_thumbnailContainer {
+  display: flex;
+  justify-content: center; /* Center thumbnails horizontally */
+  gap: 10px; /* Space between thumbnails */
+  margin-top: 10px; /* Add some spacing between the main image and thumbnails */
+}
+
+.partone_thumbnail {
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+  border-radius: 8px;
+  object-fit: cover;
+  border: 1px solid #ddd;
+}
+
+/* Responsive styles for tablets and mobile devices */
+@media screen and (max-width: 1024px) {
+  .partone_container {
+    flex-direction: column; /* Stack columns vertically on smaller screens */
+    gap: 10px; /* Reduce space between stacked columns */
+  }
+
+  .partone_leftColumn, .partone_rightColumn {
+    max-width: 100%; /* Allow columns to take full width */
+  }
+
+  .partone_rightColumn {
+    padding: 10px; /* Reduce padding for smaller screens */
+    margin-left: 40px;
+  }
+
+  .partone_mainImage {
+    width: 100%; /* Make the main image responsive */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  .partone_thumbnailContainer {
+    flex-direction: row; /* Align thumbnails horizontally */
+    flex-wrap: wrap; /* Allow thumbnails to wrap to the next line if needed */
+    gap: 10px; /* Maintain space between thumbnails */
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .partone_heading {
+    font-size: 20px; /* Adjust heading size for smaller screens */
+  }
+
+  .partone_description {
+    font-size: 14px; /* Adjust font size for smaller screens */
+  }
+
+  .partone_mainImage {
+    width: 100%; /* Make the main image responsive */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  .partone_thumbnail {
+    width: 60px; /* Adjust thumbnail size for smaller screens */
+    height: 60px; /* Adjust thumbnail size for smaller screens */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .partone_heading {
+    font-size: 18px; /* Further adjust heading size for very small screens */
+  }
+
+  .partone_description {
+    font-size: 12px; /* Further adjust font size for very small screens */
+  }
+
+  .partone_mainImage {
+    width: 100%; /* Make the main image responsive */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  .partone_thumbnail {
+    width: 50px; /* Further adjust thumbnail size for very small screens */
+    height: 50px; /* Further adjust thumbnail size for very small screens */
+  }
+}

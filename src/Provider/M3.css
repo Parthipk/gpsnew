@@ -1,0 +1,88 @@
+.m3-outer-container {
+  display: flex; /* Use flexbox for centering */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically if needed */
+  padding: 20px; /* Optional padding for outer container */
+  height: auto; /* Flexible height */
+}
+
+.m3-container {
+  display: flex; /* Use flexbox for two columns */
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items */
+  margin: 0 auto; /* Center the container horizontally */
+  max-width: 800px; /* Set a maximum width for better centering */
+  gap: 20px; /* Space between the left and right sections */
+}
+
+.m3-left {
+  display: flex; /* Use flexbox to ensure the image fills the container */
+  justify-content: center; /* Center the image horizontally */
+}
+
+.m3-left-image {
+  height: 585px; /* Set a specific height for the left image */
+  width: 558px;  /* Set a specific width for the left image */
+}
+
+.m3-right {
+  display: flex; /* Use flexbox for the right side images */
+  justify-content: center; /* Center the images */
+}
+
+.m3-right-images-container {
+  display: flex; /* Use flexbox to arrange right images horizontally */
+  gap: 100px; /* Increased space between the images */
+}
+
+.m3-right-image {
+  width: 150px; /* Fixed width for rounded images */
+  height: 150px; /* Fixed height for rounded images */
+  border-radius: 50%; /* Make images rounded */
+  object-fit: cover; /* Ensure images cover their area */
+}
+
+.m3-header {
+  font-size: 24px; /* Font size for the header */
+  font-weight: bold; /* Make the header bold */
+  color: #003366; /* Custom color for the header */
+  text-align: center;
+}
+
+.m3-lorem-ipsum {
+  text-align: justify; /* Center the text */
+  font-size: 16px; /* Font size for the Lorem Ipsum text */
+  color: #555; /* Custom color for the text */
+  margin-bottom: 20px; /* Space below the description */
+  max-width: 90%; /* Set a max width for better readability */
+  margin: 0 auto; /* Center the description */
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+  .m3-container {
+    flex-direction: column; /* Stack the columns on small screens */
+    gap: 20px; /* Adjust gap */
+  }
+
+  .m3-left-image {
+    width: 100%; /* Make the left image full width */
+    height: auto; /* Adjust height for responsiveness */
+  }
+
+  .m3-right-images-container {
+    flex-direction: column; /* Stack images vertically in mobile view */
+    gap: 20px; /* Space between vertically stacked images */
+    justify-content: center; /* Center align images */
+  }
+
+  .m3-right-image {
+    width: 80px; /* Adjust right image size for responsiveness */
+    height: 80px; /* Adjust right image size for responsiveness */
+  }
+}
+
+.m3-right-image:hover {
+  transform: scale(1.1); /* Slightly enlarge the image on hover */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Add shadow effect */
+}

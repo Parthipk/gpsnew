@@ -1,0 +1,55 @@
+.phasesix-container {
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  background-color: #f4f4f4; /* Light background color for contrast */
+  box-sizing: border-box; /* Ensures padding is included in the total width */
+}
+
+.phasesix-heading {
+  font-size: 2rem;
+  color: #003366;
+  margin-bottom: 20px; /* Space below the heading */
+}
+
+.phasesix-video-container {
+  display: flex;
+  justify-content: center;
+  width: 800px; /* Fixed width for the video container */
+  height: 500px; /* Fixed height for the video container */
+  margin: 0 auto; /* Center horizontally */
+  margin-top: 20px; /* Space above the video container */
+  box-sizing: border-box; /* Ensures padding is included in the total width */
+}
+
+video {
+  max-width: 100%; /* Ensures the video does not overflow the container */
+  height: auto; /* Maintains aspect ratio */
+  border-radius: 10px; /* Optional: Rounded corners for the video */
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .phasesix-video-container {
+    width: 90%; /* Adjust container width for tablets and smaller screens */
+    height: auto; /* Allow height to adjust automatically */
+  }
+}
+
+@media (max-width: 768px) {
+  .phasesix-video-container {
+    width: 100%; /* Full width for smaller screens */
+    height: auto; /* Allow height to adjust automatically */
+  }
+}
+
+@media (max-width: 480px) {
+  .phasesix-heading {
+    font-size: 1.5rem; /* Reduce heading size for very small screens */
+  }
+
+  .phasesix-video-container {
+    width: 100%; /* Full width for very small screens */
+    height: auto; /* Allow height to adjust automatically */
+  }
+}

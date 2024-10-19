@@ -1,0 +1,28 @@
+/* General Reset */
+html, body {
+
+  
+    overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+.phase-two-container {
+    width: 100vw; /* Full viewport width */
+    height: 80vh; /* Height of the container */
+    background: url('../images/productland.png') no-repeat center center/cover; /* Background image */
+    display: flex; /* Flexbox layout */
+    flex-direction: column; /* Stack children vertically */
+    justify-content: center; /* Center children vertically */
+    align-items: center; /* Center children horizontally */
+    color: white; /* Text color */
+    text-align: center; /* Center text */
+    padding: 0; /* No padding */
+    position: relative; /* Position relative for child elements */
+    overflow: hidden; /* Prevent overflow */
+}
+
+/* Media Queries for mobile */
+@media screen and (max-width: 768px) {
+    .phase-two-container {
+        background: url('../images/pruductphone.png') no-repeat center center/cover; /* Mobile background image */
+    }
+}

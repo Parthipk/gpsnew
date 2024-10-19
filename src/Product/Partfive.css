@@ -1,0 +1,109 @@
+/* Base styles for larger screens (desktop) */
+.partfive-container {
+  text-align: center; /* Center text alignment */
+  padding: 20px;
+}
+
+.partfive-heading {
+  font-size: 2.5rem;
+  color: #003366;
+  margin-bottom: 20px;
+}
+
+.partfive-description {
+  font-size: 1.2rem;
+  display: block; /* Changed to block */
+  margin-bottom: 30px;
+  width: 90%; /* Adjusted width */
+  margin: 0 auto; /* Centering the description */
+  color: #333;
+}
+
+.partfive-boxes {
+  display: flex;
+  justify-content: center; /* Center boxes horizontally */
+  gap: 10px; /* Decreased gap between boxes */
+  width: 90%; /* Adjusted width */
+  margin: 0 auto; /* Center the boxes container */
+}
+
+.partfive-box {
+  width: 190px;
+  height: 139px;
+  background-color: #ddd;
+  display: flex;
+  flex-direction: column; /* Stack content vertically */
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+}
+
+.box-number {
+  font-size: 2rem;
+  color: #003366;
+  margin-bottom: 10px;
+}
+
+.box-content {
+  font-size: 18px;
+  color: #000000;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Responsive styles for tablets and mobile devices */
+@media screen and (max-width: 768px) {
+  .partfive-boxes {
+    flex-direction: column; /* Stack boxes vertically on tablets */
+    gap: 15px; /* Increase gap between stacked boxes */
+    margin: 0 auto; /* Center boxes container */
+  }
+  
+  .partfive-box {
+    width: 100%; /* Make boxes responsive */
+    height: auto; /* Maintain aspect ratio */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .partfive-heading {
+    font-size: 2rem; /* Adjust heading size for smaller screens */
+  }
+  
+  .partfive-description {
+    font-size: 1rem; /* Adjust font size for smaller screens */
+  }
+  
+  .partfive-boxes {
+    flex-direction: column; /* Stack boxes vertically on smaller screens */
+    gap: 20px; /* Increase gap between stacked boxes */
+    margin: 0 auto; /* Center boxes container */
+  }
+
+  .partfive-box {
+    width: 100%; /* Make boxes responsive */
+    height: auto; /* Maintain aspect ratio */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .partfive-heading {
+    font-size: 1.5rem; /* Further adjust heading size for very small screens */
+  }
+
+  .partfive-description {
+    font-size: 0.9rem; /* Further adjust font size for very small screens */
+  }
+
+  .partfive-boxes {
+    gap: 10px; /* Adjust gap between boxes */
+    margin: 0 auto; /* Center boxes container */
+  }
+
+  .partfive-box {
+    width: 100%; /* Make boxes responsive */
+    height: auto; /* Maintain aspect ratio */
+  }
+}

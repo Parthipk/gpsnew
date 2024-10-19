@@ -1,0 +1,113 @@
+/* ImageAndText.css */
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+
+.layout-section {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(
+        rgba(255, 255, 255, 0.5), /* Semi-transparent white for overlay */
+        rgba(255, 255, 255, 0.5)
+    ), url('../landimg/Group 876.png'); /* Background image */
+    background-size: cover; /* Ensure the background image covers the entire section */
+    background-position: center; /* Center the background image */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 92%;
+    height: 450px;
+    margin: auto;
+    margin-left: 45px;
+}
+/* styles.css or your specific CSS file */
+.heading-lorem {
+    color: white;
+    font-size: 4rem;
+  }
+  
+.text-content {
+    flex: 1;
+    margin-right: 20px; /* Increased margin for spacing */
+    z-index: 1; /* Ensure text is above the background */
+}
+
+.text-content h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.text-content p {
+    font-size: 1rem;
+    color: #454545;
+    line-height: 1.6;
+}
+
+.image-container {
+    flex: 1;
+    margin-left: 20px; /* Adjust margin for spacing */
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.custom-image {
+    width: 300px;
+    height: 300px;
+    margin-left: 300px;
+  }
+  
+/* Responsive Styles */
+@media (max-width: 767px) {
+    .layout-section {
+        flex-direction: column; /* Stack text and image vertically */
+    }
+    .layout-section {
+        margin-left: 8px;
+        height: auto;
+        margin-right: 8px;
+     
+    }
+
+    .custom-image {
+        width: 300px;
+        height: 300px;
+        margin-left: -39px; /* Center the image on smaller screens */
+    }
+
+    .text-content {
+        margin-right: 0;
+        margin-bottom: 20px; /* Add space below the text content */
+    }
+
+    .image-container {
+        text-align: center; /* Center the image container */
+    }
+ 
+    
+}
+
+/* Button Styling */
+button.bg-success {
+    background-color: blue; /* Blue background color */
+    color: white; /* White text color */
+    border: none; /* Remove default border */
+    border-radius: 20px; /* Rounded corners */
+    padding: 10px 20px; /* Adjust padding for better button size */
+    font-size: 1rem; /* Adjust font size */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: background-color 0.3s ease; /* Smooth transition effect */
+}
+
+button.bg-success:hover {
+    background-color: darkblue; /* Darker blue on hover */
+}

@@ -1,0 +1,193 @@
+/* Container styling for each section */
+.sales_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 90%;
+  margin: 0 auto; /* Centers the container horizontally */
+}
+
+/* Text column styling */
+.sales_text-column {
+  flex: 1;
+  padding: 20px;
+}
+
+.sales_text-column h1 {
+  font-size: 1.5rem;
+  margin-left: 194px;
+  color: #003366;
+}
+
+.sales_about-points {
+  list-style: none;
+  padding-left: 192px;
+}
+
+.sales_about-points li {
+  position: relative;
+  padding-left: 40px; /* Adjust as needed to fit the circle */
+  margin-bottom: 15px; /* Adjust spacing between items */
+  font-size: 16px; /* Adjust text size as needed */
+}
+
+.sales_about-points li::before {
+  content: '✔'; /* Tick mark symbol */
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px; /* Circle diameter */
+  height: 30px; /* Circle diameter */
+  border-radius: 50%;
+  background-color: #C9DDEB; /* Circle color */
+  color: #0C66A3; /* Tick mark color */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px; /* Adjust tick size as needed */
+}
+
+/* Divider styling */
+.sales_divider {
+  margin: 40px auto;
+  width: 80%;
+  border-top: 2px solid #7c8b9a68;
+}
+
+/* Image column styling */
+.sales_image-column {
+  flex: 1;
+  padding: 20px;
+  background-color: transparent; /* Optional: add a fallback color */
+  position: relative; /* To position child elements */
+  max-width: 40%;
+  border-radius: 30px;
+  height: 235px;
+  margin-top: 40px;
+}
+
+.sales_primary-image {
+  width: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+  position: absolute; /* Position the image within the column */
+  left: 50%; /* Center horizontally within the column */
+  top: 40%; /* Center vertically within the column */
+  transform: translate(-50%, -50%); /* Adjust to center the image */
+  transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.sales_primary-image:hover {
+  transform: translate(-50%, -60%); /* Move the image up by 10px */
+}
+
+/* Styles for reversed layout */
+.sales_reversed .sales_text-column {
+  order: 2;
+}
+
+.sales_reversed .sales_image-column {
+  order: 1;
+}
+
+.sales_button_new {
+  margin-top: 16px;
+  background: #007bff;
+  color: white; /* White text color */
+  padding: 10px 20px; /* Adjust padding for button size */
+  text-decoration: none; /* Remove underline from link */
+  border-radius: 20px; /* Rounded corners */
+  display: inline-block; /* Make the link behave like a button */
+  font-size: 1rem; /* Font size */
+  text-align: center; /* Center text inside the button */
+  transition: background-color 0.3s ease; /* Smooth transition effect */
+  margin-left: 194px;
+}
+
+.sales_button_new:hover {
+  background-color: #002244; /* Darker blue on hover */
+}
+
+/* Header styling */
+.sales_header {
+  color: #003366; /* Dark blue color */
+  text-align: center; /* Center the text */
+  font-size: 3rem; /* Font size for large headers */
+  margin: 2rem 0; /* Margin above and below the header */
+}
+
+/* Sub-header styling */
+.sales_subheader {
+  color: #007bff; /* Lighter blue color for sub-headers */
+  text-align: center; /* Center the text */
+  font-size: 1.5rem; /* Smaller font size than the main header */
+  margin-bottom: 1rem; /* Margin below the sub-header */
+}
+
+.sales_heading {
+  font-size: 1.5rem;
+  margin-left: 0; /* Remove left margin */
+  color: #003366; /* Dark blue color */
+  text-align: left; /* Align text to the left or adjust as needed */
+}
+
+/* Existing styles */
+.sales_header {
+  color: #003366; /* Dark blue color */
+  text-align: center; /* Center the text */
+  font-size: 3rem; /* Font size for large headers */
+  margin: 2rem 0; /* Margin above and below the header */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+  .sales_container {
+      flex-direction: column;
+      align-items: center;
+  }
+  .sales_heading {
+      margin-left: 20px;
+    }
+    
+  .sales_primary-image:hover {
+      transform: translate(-5%, -10%); /* Move the image up by 10px */
+  }
+  .sales_text-column {
+      margin-left: 0; /* Remove left margin on smaller screens */
+      text-align: center; /* Center text */
+      padding: 10px; /* Adjust padding for mobile */
+  }
+
+  .sales_text-column h1 {
+      margin-left: 20px;
+  }
+  .sales_about-points {
+      padding-left: 0; /* Remove left padding on smaller screens */
+  }
+
+  .sales_about-points li {
+      padding-left: 20px; /* Adjust padding for mobile */
+  }
+
+  .sales_image-column {
+      max-width: 100%;
+      margin-top: 20px; /* Adjust margin for mobile */
+  }
+
+  .sales_primary-image {
+      width: 100%; /* Make image responsive */
+      height: auto; /* Maintain aspect ratio */
+      position: static; /* Remove absolute positioning */
+      transform: none; /* Reset transform */
+  }
+
+  .sales_button_new {
+      margin-left: 0; /* Remove left margin on smaller screens */
+  }
+
+  /* Ensure image comes before text on mobile */
+  .sales_container {
+      flex-direction: column-reverse;
+  }
+}

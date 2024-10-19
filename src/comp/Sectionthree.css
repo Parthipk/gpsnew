@@ -1,0 +1,84 @@
+.section-three-philo {
+  display: flex;
+  align-items: stretch; /* Ensure both containers stretch to the same height */
+  justify-content: space-between;
+  width: 85%;
+  margin: 0 auto; /* Center the section horizontally */
+  padding: 20px;
+  margin-left: 157px; /* Retained from your CSS */
+}
+
+.heading-philo {
+  text-align: left; /* Align heading text to the left */
+  font-size: 3rem;
+  color: #003366;
+  margin-left: 180px; /* Retained from your CSS */
+}
+
+.image-container-philo {
+  flex: 1;
+  margin-right: 20px;
+  display: flex;
+  align-items: center; /* Center image vertically */
+  
+}
+
+.text-container-philo {
+  flex: 1;
+  margin-right: 80px;
+  width: 500px; /* Fixed width to ensure it aligns with the image container */
+  display: flex;
+  align-items: center; /* Center text vertically */
+  font-size: 1.2rem;
+  color: #555; /* Medium text color */
+  line-height: 1.5; /* Increased line height for more spacing */
+  margin-bottom: 20px;
+}
+
+/* Ensure the image fills its container without distortion */
+.image-container-philo img {
+  width: 100%; /* Make the image responsive */
+  height:380px; /* Maintain aspect ratio */
+  max-height: 100%; /* Ensure the image does not exceed container height */
+  border-radius: 15px; /* Rounded corners */
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .section-three-philo {
+    flex-direction: column; /* Stack the image and text vertically on smaller screens */
+    width: 90%; /* Increase width to use more of the available space */
+    margin-left: 0px;
+  }
+
+  .heading-philo {
+    font-size: 2rem; /* Adjust font size for smaller screens */
+    margin-right: 0; /* Remove right margin on smaller screens */
+    text-align: center; /* Center text on smaller screens */
+    margin-bottom: 20px; /* Add space below heading */
+    margin-left: 0px;
+  }
+
+  .image-container-philo {
+    margin-right: 0; /* Remove margin on smaller screens */
+    margin-bottom: 20px; /* Add space below image */
+    text-align: center; /* Center the image container */
+  }
+
+  .image-container-philo img {
+    width: 100%; /* Make the image responsive */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 100%; /* Ensure image doesn’t overflow */
+  }
+  .text-container-philo {
+    width: 90%;           /* Set width to 90% */
+    margin: 0 auto;      /* Center the element horizontally */
+}
+
+}
+
+@media (max-width: 480px) {
+  .heading-philo {
+    font-size: 1.5rem; /* Further reduce font size for very small screens */
+  }
+}

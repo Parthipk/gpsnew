@@ -1,0 +1,113 @@
+.landing-page {
+  height: 100vh;
+  background: url('../imgnew/Desktop - 12.png')no-repeat center center/cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  padding: 0 20px;
+  position: relative;
+}
+
+/* Image boxes container for PC */
+.pc-images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: -145px;
+  padding-bottom: 20px;
+}
+
+.mobile-images {
+  display: none; /* Hidden on PC by default */
+}
+
+.image-box {
+  width: 350px;
+  height: 250px;
+  margin: 0 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+@media screen and (max-width: 1024px){
+  .landing-page {
+    background: url('../images/landphone.png') no-repeat center center/cover;
+    height: 90vh;
+  }
+
+  /* Show mobile images and hide PC images on mobile */
+  .pc-images {
+    display: none;
+  }
+
+ /* LandingPage.css */
+
+/* Existing styles... */
+
+.image-box-container.mobile-images {
+  display: flex;
+  flex-direction: column; /* Stack boxes in a column */
+  align-items: center; /* Center the boxes */
+  width: 80%; /* Set width to 80% */
+  margin: 0 auto; /* Center the container */
+  padding-top: 250px;
+}
+.image-box {
+  margin-bottom: 16px; /* Add some space between boxes */
+  height: 100px;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.image-box:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Adds a shadow effect on hover */
+}
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px); /* Start slightly lower */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* End at original position */
+  }
+}
+
+.image-box-container.mobile-images {
+  display: flex;
+  flex-direction: column; /* Stack boxes in a column */
+  align-items: center; /* Center the boxes */
+  width: 80%; /* Set width to 80% */
+  margin: 0 auto; /* Center the container */
+  padding-top: 250px;
+}
+
+.image-box {
+  margin-bottom: 16px; /* Add some space between boxes */
+  height: 100px;
+  border-radius: 10px;
+  animation: slideIn 0.5s ease forwards; /* Apply the animation */
+  opacity: 0; /* Start hidden for animation */
+}
+
+}
+
+.image-box:hover {
+  transform: translateY(-10px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+/* Existing styles... */

@@ -1,0 +1,64 @@
+.book_partthree {
+    height: 80vh;
+    background: url('../image_About/bland\ \(1\).png') no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 0 20px;
+    position: relative; /* Ensure the image's position is relative to this container */
+}
+  
+.book_partthree h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+  
+.book_partthree p {
+    font-size: 1.5rem;
+}
+  
+.book_animated-image {
+    width: 30%; /* Adjusted the size to 50% */
+    max-width: 300px; /* Ensures the image does not exceed 300px in width */
+    animation: moveUp 8s ease-in-out forwards; /* Use 'forwards' to keep the final position */
+    position: relative; /* Allows the top movement */
+    transition: transform 0.8s ease-in-out; /* Transition for hover effect */
+}
+  
+/* Hover effect */
+.book_animated-image:hover {
+    transform: scale(1.05); /* Slightly increase the size on hover */
+}
+  
+@keyframes moveUp {
+    50% {
+      opacity: 1;
+      transform: translateY(-20px) scale(1); /* Midway point, start moving up */
+    }
+    60% {
+      opacity: 1;
+      transform: translateY(-30px) scale(1); /* End position, moved up by 30px */
+    }
+}
+  
+@media screen and (max-width: 768px) {
+    .book_partthree {
+      background: url('../image_About/bphone.png') no-repeat center center/cover;
+      /* You can adjust the background position and size for mobile as needed */
+    }
+  
+    .book_partthree h1 {
+      font-size: 2.5rem; /* Adjust font size for mobile */
+    }
+  
+    .book_partthree p {
+      font-size: 1.2rem; /* Adjust font size for mobile */
+    }
+  
+    .book_animated-image {
+      width: 90%; /* Adjust the size of the animated image for mobile */
+    }
+}

@@ -1,0 +1,25 @@
+.M2_landing-page {
+  height: 80vh;
+  background: url('../NEWIMG/biopsyland.png') no-repeat center center/cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  padding: 0 20px;
+}
+
+@media screen and (max-width: 1024px) {
+  .M2_landing-page {
+      background: url('../NEWIMG/biopsyphon.png') no-repeat center center/cover;
+  }
+
+  .M2_landing-page h1 {
+      font-size: 2.5rem; /* Adjust font size for mobile */
+  }
+
+  .M2_landing-page p {
+      font-size: 1.2rem; /* Adjust font size for mobile */
+  }
+}

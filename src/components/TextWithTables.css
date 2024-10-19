@@ -1,0 +1,274 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 86%;
+  margin: 0 auto; /* Centers the container horizontally */
+}
+
+.text-column {
+  padding: 20px;
+}
+
+/* TextWithTables.css */
+.section-p {
+  font-size: 20px;
+  text-align: center;
+  color: gray;
+  justify-content: left;
+  margin-bottom: 10px; /* Adjust the value to move text up or down as needed */
+}
+
+.section-title {
+  color: #003366;
+  text-align: center;
+  font-size: 4rem;
+  margin-bottom: 2px;
+}
+
+.text-column h1 {
+  font-size: 2.5rem;
+  color: #003366;
+}
+
+.text-column p {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.5;
+}
+
+.image-column {
+  flex: 1;
+  padding: 20px;
+  background: url('../images/bg2.png') no-repeat center center; /* Add background image */
+  background-size: cover; /* Ensure the background image covers the entire column */
+  position: relative; /* To position child elements */
+  max-width: 38%;
+  border-radius: 30px;
+  height: 235px;
+  margin-top: 40px;
+}
+
+.primary-image {
+  width: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+  position: absolute; /* Position the image within the column */
+  left: 50%; /* Center horizontally within the column */
+  top: 40%; /* Center vertically within the column */
+  transform: translate(-50%, -50%); /* Adjust to center the image */
+  transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.primary-image:hover {
+  transform: translate(-50%, -60%); /* Move the image up by 10px */
+}
+
+/* Styles for reversed layout */
+.reversed .text-column {
+  order: 2;
+}
+
+.reversed .image-column {
+  order: 1;
+}
+
+.button_new {
+  background: #007bff;
+  color: white; /* White text color */
+  padding: 10px 20px; /* Adjust padding for button size */
+  text-decoration: none; /* Remove underline from link */
+  border-radius: 20px; /* Rounded corners */
+  display: inline-block; /* Make the link behave like a button */
+  font-size: 1rem; /* Font size */
+  text-align: center; /* Center text inside the button */
+  transition: background-color 0.3s ease; /* Smooth transition effect */
+  margin-top: 16px;
+}
+
+.button_new:hover {
+  background-color: #002244; /* Darker blue on hover */
+}
+
+.table-cell.text {
+  text-align: left; /* Align text and buttons to the left */
+}
+
+/* Styles for description lists */
+.description-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.description-list li {
+  position: relative;
+  padding-left: 35px; /* Adjust as needed to fit the tick mark */
+  margin-bottom: 10px; /* Adjust spacing between items */
+  font-size: 16px; /* Adjust text size as needed */
+}
+
+.description-list li::before {
+  content: '✔'; /* Tick mark symbol */
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #0C66A3; /* Tick mark color */
+  font-size: 18px; /* Adjust tick size as needed */
+}
+
+.description-heading {
+  font-size: 1.25rem; /* Slightly larger font for headings */
+  color: #003366; /* Color to match the theme */
+  margin-bottom: 10px; /* Space between heading and list */
+}
+
+.description-item {
+  margin-bottom: 10px; /* Space between items */
+  font-size: 16px; /* Consistent font size */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 764px) {
+  .container {
+    flex-direction: column; /* Stack text and image vertically */
+    width: 90%;
+    margin: 0 auto; /* Center container horizontally */
+  }
+  
+  .image-column {
+    max-width: 100%;
+    margin-top: 20px;
+    height: auto; /* Adjust height for smaller screens */
+    position: relative; /* Ensure correct positioning */
+    margin-left: auto;
+    order: 1; /* Set image column first */
+  }
+
+  .text-column {
+    padding: 5px;
+    text-align: center; /* Center text for smaller screens */
+    order: 2; /* Set text column second */
+  }
+
+  .text-column h1 {
+    font-size: 1.5rem;
+    color: #003366;
+  }
+
+  .description-list li {
+    text-align: justify;
+  }
+
+  .section-p {
+    font-size: 16px;
+    text-align: justify;
+    width: 80%;
+    margin-left: 10%;
+  }
+
+  .section-title {
+    color: #003366;
+    text-align: center;
+    font-size: 3rem;
+  }
+
+  .button_new {
+    width: 40%; /* Button width on small screens */
+    padding: 15px; /* Increase padding for better touch targets */
+    margin-left: -15px; /* Adjust if needed */
+  }
+
+  /* Alternate layout for mobile devices */
+  .container:nth-of-type(odd) {
+    flex-direction: column; /* Maintain column layout */
+  }
+
+  .primary-image:hover {
+    transform: translate(-10%, -15%); /* Move the image up by 10px */
+  }
+}
+
+/* Media Queries for 1024px Screens */
+@media (max-width: 1024px) {
+  .container {
+    width: 90%; /* Slightly reduce the width to fit within the screen */
+    margin: 0 auto; /* Center the container horizontally */
+    justify-content: center; /* Center content inside the container */
+    align-items: center; /* Center items vertically within the flex container */
+    flex-direction: column; /* Stack text and image vertically for centered alignment */
+    text-align: center; /* Center text in all columns */
+  }
+
+  .image-column {
+    max-width: 100%; /* Allow image to take up full width */
+    margin-top: 30px;
+    height: auto; /* Maintain aspect ratio */
+    position: relative; /* Maintain positioning for image */
+    text-align: center; /* Center the image */
+    order: 1; /* Set image column first */
+  }
+
+  .text-column {
+    padding: 20px; /* Adjust padding for better spacing */
+    text-align: center; /* Center text inside text-column */
+    width: 100%; /* Ensure the text column takes full width */
+    order: 2; /* Set text column second */
+  }
+
+  .text-column h1 {
+    font-size: 2rem; /* Reduce heading size for balance */
+    color: #003366;
+  }
+
+  .section-title {
+    font-size: 3.5rem; /* Adjust title size */
+    margin-bottom: 10px;
+    text-align: center; /* Center the title */
+  }
+
+  .section-p {
+    font-size: 18px; /* Adjust font size */
+    width: 80%; /* Adjust width to maintain layout */
+    margin: 0 auto; /* Center paragraph */
+    margin-bottom: 15px; /* Adjust spacing */
+    text-align: center; /* Center paragraph text */
+  }
+
+  .primary-image {
+    width: 80%; /* Adjust image width */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: auto; /* Center image horizontally */
+    position: static; /* Ensure correct positioning */
+    transform: none; /* Remove any transform for better alignment */
+    margin-left: auto;
+  }
+
+  .button_new {
+    width: 50%; /* Adjust button width */
+    padding: 12px 18px; /* Increase padding for a better look */
+    margin: 20px auto; /* Center the button and add spacing */
+  }
+
+  .description-list li {
+    font-size: 16px; /* Adjust font size for readability */
+    padding-left: 30px; /* Adjust padding for tick mark alignment */
+    text-align: center; /* Center description list items */
+  }
+
+  .description-heading {
+    font-size: 1.5rem; /* Adjust heading size */
+    text-align: center; /* Center the heading */
+  }
+
+  /* Adjustments for Reversed Layout */
+  .reversed .text-column {
+    order: 2;
+    padding-top: 30px; /* Add spacing between text and image */
+  }
+
+  .reversed .image-column {
+    order: 1;
+    margin-top: 20px; /* Add top margin to image */
+  }
+}

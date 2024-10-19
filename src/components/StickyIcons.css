@@ -1,0 +1,94 @@
+.sticky-icons {
+    position: fixed;
+    bottom: 20px; /* Distance from the bottom */
+    right: 20px; /* Distance from the right */
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Space between icons */
+}
+
+.sticky-icons a {
+    display: flex;
+    align-items: center; /* Align icons vertically */
+    justify-content: center; /* Center icons horizontally */
+    width: 50px; /* Width for each icon link */
+    height: 50px; /* Height for each icon link */
+    background-color: #003366; /* Default background color */
+    border-radius: 50%; /* Make the background circular */
+    color: white; /* Icon color */
+    text-decoration: none; /* Remove underline from links */
+    transition: background-color 0.3s; /* Smooth background transition */
+}
+
+/* Specific hover colors for each icon */
+.sticky-icons .whatsapp-icon:hover {
+    background-color: #25D366; /* WhatsApp hover color */
+}
+
+.sticky-icons .facebook-icon:hover {
+    background-color: #316FF6; /* Facebook hover color */
+}
+.sticky-icons .facebook-icon:hover {
+    background-color: #316FF6; /* Facebook hover color */
+}
+
+.sticky-icons .linkedin-icon:hover {
+    background-color: #0077B5; /* LinkedIn hover color */
+}
+
+.sticky-icons .instagram-icon:hover {
+    background-color: #E1306C; /* Instagram hover color */
+}
+
+
+
+.sticky-icons i {
+    font-size: 24px; /* Icon size */
+}
+
+.bookademo {
+    position: relative; /* For tooltip positioning */
+    animation: pulsate 1.5s infinite; /* Pulsating effect */
+}
+
+/* Tooltip styles for bookademo */
+.bookademo:hover::after {
+    content: 'BOOK A DEMO'; /* Tooltip text */
+    position: absolute;
+    top: 50%; /* Center vertically relative to the icon */
+    right: 70px; /* Position the tooltip to the left of the icon */
+    transform: translateY(-50%); /* Adjust vertical alignment */
+    padding: 10px 15px; /* Increase padding for more height */
+    background-color: #003366;
+    color: white;
+    font-size: 14px;
+    border-radius: 8px;
+    white-space: nowrap;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    height: 60px; /* Adjust height */
+    display: flex;
+    align-items: center; /* Vertically center text within the tooltip */
+}
+
+.bookademo:hover::before {
+    content: '';
+    position: absolute;
+    top: 50%; /* Vertically centered with the icon */
+    right: 60px; /* Position triangle just next to the tooltip */
+    transform: translateY(-50%);
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent #003366 transparent transparent; /* Creates the triangle pointing right */
+}
+
+@keyframes pulsate {
+    0% {
+        transform: scale(1); /* Original size */
+    }
+    50% {
+        transform: scale(1.1); /* Big size */
+    }
+    100% {
+        transform: scale(1); /* Back to original size */
+    }
+}

@@ -1,0 +1,111 @@
+/* General Styles */
+.L1-navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 76px;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.4s, box-shadow 0.4s;
+    z-index: 10;
+    background-color: transparent; /* Default transparent background */
+}
+
+.L1-navbar h1 {
+    margin-left: 20px;
+}
+
+.L1-menu-icon {
+    display: none; /* Hidden by default */
+    font-size: 1.8rem;
+    color: #fff;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.L1-nav-links {
+    display: flex;
+    list-style: none;
+    margin-right: 20px;
+    gap: 67px;
+}
+
+.L1-nav-links li {
+    margin: 0 15px;
+}
+
+.L1-nav-links li a {
+    color: #0C66A3;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+.L1-nav-links li a:hover {
+    color: white;
+}
+
+.L1-navbar.active {
+    background-color: rgba(0, 0, 0, 0.8); /* Change background color to black when scrolled */
+    color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Optional: add shadow for better visibility */
+}
+
+/* Change text color to white when navbar is active */
+.L1-navbar.active .L1-nav-links li a {
+    color: #ffffff; /* Text color for links when navbar is active */
+}
+
+.L1-nav-links.mobile {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.9);
+    width: 52%;
+    border-radius: 30px;
+    height: 249px;
+    color: white;
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+}
+
+.L1-nav-links.mobile li a {
+    font-size: 1.5rem;
+}
+
+.L1-nav-links.mobile.active {
+    display: flex;
+    color: white;
+    padding: 10px 10px 10px 10px;
+}
+
+/* Media query for mobile devices */
+@media screen and (max-width: 1024px) {
+    .L1-menu-icon {
+        display: block; /* Make the menu icon visible on mobile devices */
+    }
+
+    .L1-nav-links {
+        display: none;
+    }
+
+    .L1-nav-links.mobile.active {
+        display: flex;
+        margin-top: 20px;
+        height: 286px;
+    }
+
+    .L1-logo {
+        margin-top: 17px; /* Increase the top margin for the logo on mobile */
+    }
+}
+
+.L1-logo {
+    height: 100px; /* Adjust size as needed */
+    margin-left: 20px;
+    z-index: 10000; /* Corrected the z-index */
+}

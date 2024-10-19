@@ -1,0 +1,80 @@
+.section-phasefour {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    margin: 0 auto; /* Center the section horizontally */
+  }
+  
+  .heading-phasefour {
+    text-align: left; /* Center the heading text */
+    font-size: 3rem;
+    color: #003366;
+    margin-left: 155px; /* Add spacing below the heading */
+    
+    
+  }
+  
+  .content-text-phasefour {
+  
+    margin-right: 20px;
+    font-size: 1.2rem;
+    color: #555; /* Medium text color */
+    line-height: 1.5; /* Increased line height for more spacing */
+    margin-bottom: 20px;
+  }
+  
+  .content-image-phasefour {
+    flex: 1;
+    display: flex;
+    justify-content: center; /* Center the image horizontally */
+  }
+  
+  .content-image-phasefour img {
+    height: 300px;
+    width: 500px;
+    border-radius: 30px;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 1640px) {
+    .section-phasefour {
+      flex-direction: column; /* Stack the text and image vertically on smaller screens */
+      width: 90%; /* Increase width to use more of the available space */
+    }
+  
+    .heading-phasefour {
+      font-size: 2rem; /* Adjust font size for smaller screens */
+      margin-left: 0; /* Remove left margin on smaller screens */
+      text-align: center; /* Center text on smaller screens */
+    }
+  
+    .content-text-phasefour {
+      margin-right: 0; /* Remove margin-right on smaller screens */
+      margin-bottom: 20px; /* Add bottom margin to separate from the image */
+
+      width: 90%;
+      text-align: justify;
+    }
+  
+    .content-image-phasefour {
+      justify-content: center; /* Ensure the image container is centered */
+      
+    }
+  
+    .content-image-phasefour img {
+      width: 100%; /* Make the image responsive */
+      height: auto; /* Maintain aspect ratio */
+
+
+    
+    
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .heading-phasefour {
+      font-size: 1.5rem; /* Further reduce font size for very small screens */
+    }
+  }
+  

@@ -1,0 +1,44 @@
+.text-container {
+  text-align: center; /* Centers text inside the container */
+  padding: 20px;
+}
+
+.heading {
+  font-size: 2rem;
+  color: #333;
+  width: 87%; /* Ensures the heading takes up full width of the parent container */
+  margin: 0 auto; /* Center the heading horizontally */
+}
+
+.subheading {
+  font-size: 1.5rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.rounded-button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.rounded-button:hover {
+  background-color: #0056b3;
+}
+@media (max-width: 768px) {
+  .heading {
+    font-size: 14px;
+    width: 88%;
+    text-align: justify;
+}
+.subheading {
+  font-size: 16px;
+  margin-left: -14px;
+}
+
+}

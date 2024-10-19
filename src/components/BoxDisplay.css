@@ -1,0 +1,67 @@
+/* BoxDisplay.css */
+
+.box-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between boxes */
+    padding: 20px;
+  }
+  
+  .box {
+    background-color: #f8f9fa; /* Light background color */
+    border-radius: 15px; /* Rounded edges */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+    padding: 20px;
+    width: 300px; /* Fixed width for each box */
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+  }
+  
+  .box:hover {
+    transform: translateY(-5px); /* Slight lift effect */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+  }
+  
+  .box-heading {
+    font-size: 1.5rem;
+    color: #003366; /* Heading color */
+    margin-bottom: 10px; /* Space below the heading */
+    transition: color 0.3s ease; /* Smooth transition for color change */
+  }
+  
+  .box:hover .box-heading {
+    color: #0056b3; /* Change heading color on hover */
+  }
+  
+  .box-description {
+    font-size: 1rem;
+    color: #333; /* Description color */
+    transition: color 0.3s ease; /* Smooth transition for color change */
+    text-align: justify;
+  }
+  
+  .box:hover .box-description {
+    color: #555; /* Change description color on hover */
+  }
+  .imageOne {
+    margin-top: 20px; /* Space above the image */
+    text-align: center; /* Center the image horizontally */
+  }
+  
+  .imageOne img {
+    width: 100%; /* Make the image responsive */
+    max-width: 95%; /* Set a maximum width for the image */
+    border-radius: 10px; /* Rounded corners for the image */
+    object-fit: cover; /* Maintain image aspect ratio */
+    margin-left: -60px;
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+  }
+  @media (max-width: 1024px) {
+
+    
+  .imageOne img {
+
+    margin-left: 0px;
+  }
+  }

@@ -1,0 +1,156 @@
+.foot {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+  position: relative;
+  width: 100%;
+}
+
+.foot__left {
+  flex: 1;
+}
+
+.foot__logo {
+  width: 150px;
+  margin-bottom: 10px;
+}
+
+.foot__text {
+  font-size: 0.9rem;
+  color: #ffffff;
+}
+
+.foot__middle {
+  flex: 1;
+  text-align: center;
+  margin-left: 20%;
+  margin-top: -150px;
+}
+
+.foot__header {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.foot__links {
+  list-style-type: none;
+  padding: 0;
+}
+
+.foot__links li {
+  margin: 5px 0;
+}
+
+.foot__links a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.foot__links a:hover {
+  text-decoration: underline;
+}
+
+.foot__right {
+  flex: 1;
+  position: absolute;
+  top: 17px;
+  right: 150px;
+}
+
+/* Horizontal Line */
+.foot__divider {
+  width: 100%;
+  border: 0;
+  border-top: 1px solid #555;
+  margin: 25px 0;
+}
+
+/* Social Media Icons */
+.foot__social-media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.foot__social-icon {
+  margin: 0 10px;
+}
+
+.foot__social-icon img {
+  width: 30px;
+  height: 30px;
+}
+
+/* Responsive Design for Tablets and Mobile Devices */
+@media (max-width: 1024px) {
+  .foot {
+    flex-direction: column;
+    padding: 10px;
+    margin-right: 20px;
+  }
+
+  .foot__text {
+    display: none;
+  }
+
+  .foot__left, .foot__middle, .foot__right {
+    position: static;
+    margin-top: 20px;
+  }
+
+  .foot__middle {
+    margin-left: 0; /* Center the middle section on mobile */
+  }
+
+  .foot__right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .foot__divider {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .foot__social-media {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .foot__left, .foot__middle, .foot__right {
+    flex: 1;
+    text-align: center;
+  }
+
+  .foot__left {
+    order: 1;
+  }
+
+  .foot__middle {
+    order: 2;
+    margin-top: 0;
+  }
+
+  .foot__right {
+    order: 3;
+    margin-top: 20px;
+  }
+
+  .foot__divider {
+    margin: 10px auto;
+  }
+
+  .foot__social-media {
+    order: 4;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+  }
+}

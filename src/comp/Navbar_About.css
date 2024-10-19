@@ -1,0 +1,177 @@
+/* General Navbar styles */
+.navbar {
+  position: fixed;
+  top: 0;
+  width:auto;
+  height: 85px;
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.4s, box-shadow 0.4s;
+  z-index: 10;
+  background-color: transparent; /* Default transparent background */
+}
+
+/* Navbar active state for PC */
+.navbar.active {
+  background-color: rgba(0, 0, 0, 0.8); /* Black background when scrolled */
+  color: #ffffff; /* Text color when scrolled */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Optional: add shadow for better visibility */
+}
+
+/* Logo styling */
+.logo {
+  height: 100px; /* Adjust size as needed */
+  margin-left: 20px;
+  z-index: 10000; /* Corrected the z-index */
+}
+
+/* Desktop navigation links styling */
+.nav-links {
+  display: flex;
+  list-style: none;
+  margin-right: 20px;
+  gap: 67px; /* Adjusted for better spacing */
+}
+
+.nav-links li {
+  margin: 0 15px;
+}
+
+.nav-links li a {
+  color: #003366; /* Default text color for links on PC */
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.3s;
+}
+
+/* Change text color to #003366 when navbar is active (only on PC) */
+@media screen and (min-width: 1024px) {
+  .navbar.active .nav-links li a {
+    color: #ffffff; /* Text color for links when navbar is active on desktop */
+  }
+}
+
+/* Mobile Styles */
+.menu-icon {
+  display: none; /* Hidden by default */
+  font-size: 1.8rem;
+  color: #fff;
+  margin-right: 33px;
+  cursor: pointer;
+}
+
+.nav-links.mobile {
+  display: none;
+  position: absolute;
+  top: 85px; /* Align below the navbar */
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  width: 100%; /* Full width for mobile menu */
+  border-radius: 0; /* Remove border-radius if not needed */
+  color: white;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  padding: 20px 0;
+}
+
+.nav-links.mobile.active {
+  display: flex;
+  margin-top: 20px;
+  background-color: rgba(255, 255, 255, 0.9); /* Ensure background color is set */
+  color: #003366; /* Ensure text color is set for mobile menu */
+}
+
+.nav-links.mobile li a {
+  font-size: 1.5rem;
+}
+
+/* Media query for mobile devices */
+@media screen and (max-width: 1024px) {
+  .menu-icon {
+    display: block; /* Make the menu icon visible on mobile devices */
+  }
+
+  .nav-links {
+    display: none; /* Hide desktop navigation links on mobile */
+  }
+
+  .nav-links.mobile.active {
+    display: flex;
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #003366;
+    width: 204px;
+    border-radius: 29px;
+    height: 202px;
+  }
+
+  .logo {
+    height: 80px; /* Adjust size for mobile */
+    margin-top: 20px; /* Adjust top margin for mobile */
+    margin-left: 10px; /* Adjust left margin for mobile */
+  }
+}
+
+/* New Button Styles */
+.appointment-button {
+  background-color: #003366; /* Button background color */
+  color: white; /* Button text color */
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 50px; /* Rounded corners */
+  margin-right: 2px; /* Space from the menu */
+  transition: background-color 0.3s;
+  margin-top: -11px;
+}
+
+.appointment-button:hover {
+  background-color: #002244; /* Darker shade on hover */
+}
+
+/* Dropdown Styles */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%; /* Position below the dropdown trigger */
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 10px 0;
+  min-width: 160px;
+  z-index: 1000; /* Ensure dropdown is on top */
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 10px 20px;
+  color: #333;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.dropdown-menu a:hover {
+  color: #003366; /* White text color on hover */
+  background-color: #3274b6; /* Dark background on hover */
+}
+
+/* Navbar active state */
+.navbar.active .dropdown-menu {
+  background-color: rgba(0, 0, 0, 0.8); /* Change dropdown background color when navbar is active */
+}
+
+.navbar.active .dropdown-menu a {
+  color: #fff; /* Change dropdown text color to white when navbar is active */
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}

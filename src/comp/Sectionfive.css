@@ -1,0 +1,108 @@
+.fivefive_section_five {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  gap: 20px; /* Space between columns */
+}
+
+.fivefive_section_five__contact-info {
+  flex: 1;
+  background-color: transparent; /* Background color for the contact info */
+  padding: 20px;
+  border-radius: 8px; /* Rounded corners */
+  color: #003366; /* Text color */
+}
+
+.fivefive_section_five__contact-info h2 {
+  margin-top: 0;
+}
+
+.fivefive_section_five__form-container {
+  flex: 1;
+}
+
+.fivefive_section_five__form {
+  display: flex;
+  flex-direction: column;
+  background-color: #0C66A3; /* Background color for the form */
+  padding: 20px;
+  border-radius: 30px; /* Rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow for the form */
+}
+
+.fivefive_section_five__form-heading {
+  font-size: 1.5rem;
+  color: #ffffff; /* Text color */
+  margin-bottom: 10px;
+}
+
+.fivefive_section_five__form-subheading {
+  font-size: 1.2rem;
+  color: #ffffff; /* Text color */
+  margin-bottom: 20px;
+}
+
+.fivefive_section_five__form-row {
+  display: flex;
+  gap: 10px; /* Space between input fields */
+  margin-bottom: 20px;
+}
+
+.fivefive_section_five__input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+}
+
+.fivefive_section_five__textarea {
+  width: 95%;
+  height: 100px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.fivefive_section_five__submit-button {
+  padding: 10px;
+  border: none;
+  border-radius: 30px;
+  background-color: #ffffff;
+  color: #003366;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.fivefive_section_five__submit-button:hover {
+  background-color: #a4b4c53d;
+  color: white;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .fivefive_section_five {
+    flex-direction: column; /* Stack columns vertically */
+    width: auto;             /* Increase width to use more of the available space */
+    margin: 0 auto;        /* Center the element horizontally */
+}
+
+
+  .fivefive_section_five__contact-info {
+    margin-bottom: 20px; /* Add space below contact info */
+  }
+
+  .fivefive_section_five__form-container {
+    width: 100%; /* Full width for form container */
+  }
+
+  .fivefive_section_five__form {
+    border-radius: 15px; /* Adjust border-radius for smaller screens */
+  }
+
+  .fivefive_section_five__form-row {
+    flex-direction: column; /* Stack input fields vertically */
+  }
+}

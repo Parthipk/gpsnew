@@ -1,0 +1,92 @@
+.l4-container {
+    display: flex; /* Use flexbox to center align */
+    justify-content: center; /* Center horizontally */
+    align-items: flex-start; /* Align items to the start (top) vertically */
+    height: auto; /* Full viewport height, adjust as necessary */
+    padding-top: 20px; /* Add padding at the top to move the image down slightly */
+    width: 80%; /* Set container width to 80% */
+    margin: 0 auto; /* Center the container */
+}
+
+.l4-image {
+    width: 60%; /* Width of the image */
+    height: 450px; /* Fixed height */
+    object-fit: cover; /* Maintain aspect ratio and cover the area */
+    margin-top: -220px; /* Optional: Add margin at the top for more spacing */
+    z-index: 1;
+    border: 5px solid #00336676; /* Add a small border */
+    border-radius: 30px; /* Optional: Add rounded corners */
+}
+
+.l4-header {
+    margin-top: 50px;
+    font-size: 2rem; /* Adjust font size as needed */
+    color: #003366;
+    text-align: left; /* Align the header text to the left */
+    margin-left: 100px; /* Add margin to the left */
+}
+
+.l4-description {
+    font-size: 1.2rem; /* Adjust font size as needed */
+    text-align: left; /* Align the description text to the left */
+    color: #555; /* Change text color if needed */
+    margin-left: 100px; /* Add margin to the left */
+    width: 88%;
+    margin-top: 100px;
+    line-height: 1.5; /* Increased line height for more spacing */
+    margin-bottom: 20px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) { /* Adjust as needed for tablet and smaller screens */
+    .l4-container {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center align items */
+        padding-top: 10px; /* Reduce padding */
+    }
+
+    .l4-image {
+        width: 90%; /* Wider on smaller screens */
+        height: auto; /* Let height adjust */
+        margin-top: -10%; /* Adjust margin for better spacing */
+        margin-left: auto;
+        z-index: 0;
+    }
+
+    .l4-header {
+        font-size: 1.8rem; /* Slightly smaller font size */
+        margin-left: 0; /* Remove left margin */
+        text-align: center; /* Center header text */
+        margin-top: 20px; /* Add margin on top for spacing */
+    }
+
+    .l4-description {
+        margin-left: 0; /* Remove left margin */
+        text-align: justify; /* Justify description text */
+        width: 95%; /* More width on smaller screens */
+        font-size: 1rem; /* Slightly smaller font size */
+        margin-top: 20px; /* Less margin on top */
+        z-index: 0;
+    }
+}
+
+@media (max-width: 1024px) { /* Adjust for mobile devices */
+    .l4-header {
+        font-size: 1.5rem; /* Further reduce font size */
+    }
+
+    .l4-description {
+        font-size: 0.9rem;
+        margin-left: auto;
+        width: 88%;
+        margin-right: auto;
+    }
+
+
+    .l4-image {
+        margin-top: 10%; /* Adjust margin for better spacing */
+        margin-left: auto;
+        z-index: 0;
+        margin-right: auto;
+    }
+}
