@@ -21,7 +21,7 @@ const Testimonial = () => {
             We offer comprehensive imaging solutions, including advanced ultrasound machines, stabilizers, essential consumables, expert support, and flexible rental options.
             </p>
             {/* Link for navigation instead of button */}
-            <Link to="/equipmentsix" className="order-now-button" style={{textDecoration:'none'}}>Order Now</Link>
+            <Link to="/equipmentsix" className="order-now-button" style={{textDecoration:'none'}}>Book Now</Link>
           </div>
         </div>
 
@@ -35,7 +35,7 @@ const Testimonial = () => {
             We provide cutting-edge ultrasound machines, affordable free-hand needle guides, essential consumables, expert assistance, and flexible rental options for patient lists.
             </p>
             {/* Link for navigation instead of button */}
-            <Link to="/equipmentfive" className="order-now-button" style={{textDecoration:'none'}}>Order Now</Link>
+            <Link to="/equipmentfive" className="order-now-button" style={{textDecoration:'none'}}>Book Now</Link>
           </div>
         </div>
       </div>

@@ -19,13 +19,13 @@ const StickyIcons = () => {
       {isPopupVisible && <Popup onClose={togglePopup} />}
 
       <a
-  href="https://api.whatsapp.com/send?phone=447389806075" // Use the phone number in the correct format
-  target="_blank"
-  rel="noopener noreferrer"
-  className="whatsapp-icon"
->
-  <i className="fab fa-whatsapp"></i>
-</a>
+        href="https://api.whatsapp.com/send?phone=447389806075" // Use the phone number in the correct format
+        target="_blank"
+        rel="noopener noreferrer"
+        className="whatsapp-icon"
+      >
+        <i className="fab fa-whatsapp"></i>
+      </a>
 
       <a
         href="https://www.instagram.com/globalprostatesolution?igsh=eDJwbnJ5YWh1YzR4" // Replace with your Instagram profile
@@ -52,7 +52,7 @@ const StickyIcons = () => {
         <i className="fab fa-linkedin"></i>
       </a>
       {/* Uncomment if Instagram is needed */}
-    
+
     </div>
   );
 };

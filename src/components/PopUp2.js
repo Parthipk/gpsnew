@@ -91,7 +91,7 @@ export default function BookADemoPopup({ onClose }) {
                 placeholder='Surgeon Name'
                 onChange={(e) => setSurgeonName(e.target.value)}
                 required
-                style={{ width: '90%' }} // Full width for input
+                style={{ width: '90%' , marginLeft:'10px' }} // Full width for input
               />
             </div>
             <div style={{ flex: 1, marginLeft: '10px' }}>
@@ -115,7 +115,7 @@ export default function BookADemoPopup({ onClose }) {
                 placeholder='Purchase Order Number'
                 onChange={(e) => setPurchaseOrder(e.target.value)}
                 required
-                style={{ width: '90%' }} // Full width for input
+                style={{ width: '90%', marginLeft: '10px' }} // Full width for input
               />
             </div>
             <div style={{ flex: 1, marginLeft: '10px' }}>
@@ -146,7 +146,7 @@ export default function BookADemoPopup({ onClose }) {
               value={service}
               onChange={(e) => setService(e.target.value)}
               required
-              style={{ width: '90%', borderRadius: '5px', height: '40px' }} // Full width for select
+              style={{ width: '90%', borderRadius: '5px', height: '40px' ,marginRight:'25px'}} // Full width for select
             >
               <option value="">Select Service</option>
               <option value="Transperineal Biopsy">Stepper-grid guided transperineal biopsy</option>
