@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import axios from 'axios'; // Import Axios for HTTP requests
 import './Popup.css'; // For styling the popup
 
@@ -11,7 +11,16 @@ export default function BookADemoPopup({ onClose }) {
   const [numberOfPatients, setNumberOfPatients] = useState('');
   const [dateTime, setDateTime] = useState(''); // Combine date and time
   const [service, setService] = useState(''); // State for service
-
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  const handleResize = () => {
+    setIsMobile(window.innerWidth <= 768); // Update state on resize
+  };
+  useEffect(() => {
+    window.addEventListener('resize', handleResize); // Add event listener
+    return () => {
+      window.removeEventListener('resize', handleResize); // Cleanup
+    };
+  }, []);
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -91,7 +100,7 @@ export default function BookADemoPopup({ onClose }) {
                 placeholder='Surgeon Name'
                 onChange={(e) => setSurgeonName(e.target.value)}
                 required
-                style={{ width: '90%' , marginLeft:'10px' }} // Full width for input
+                style={{ width: '90%' ,  marginLeft: isMobile ? '0' : '10px' }} // Full width for input
               />
             </div>
             <div style={{ flex: 1, marginLeft: '10px' }}>
@@ -115,7 +124,7 @@ export default function BookADemoPopup({ onClose }) {
                 placeholder='Purchase Order Number'
                 onChange={(e) => setPurchaseOrder(e.target.value)}
                 required
-                style={{ width: '90%', marginLeft: '10px' }} // Full width for input
+                style={{ width: '90%', marginLeft: isMobile ? '0' : '10px'  }} // Full width for input
               />
             </div>
             <div style={{ flex: 1, marginLeft: '10px' }}>
